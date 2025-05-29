@@ -50,7 +50,7 @@ loadHTML(
     function switchMode() {
       document.body.classList.toggle("light-mode");
 
-    // Check if light-mode is active after toggling
+      // Check if light-mode is active after toggling
       const isLightMode = document.body.classList.contains("light-mode");
 
       // Save the mode to localStorage
@@ -162,7 +162,7 @@ loadHTML("footer", "footer.html", function () {
 
     if (isNameValid && isEmailValid && isFeedbackValid) {
       formSuccessMessage.textContent = "Thank you for your feedback!";
-      feedbackForm.reset(); 
+      feedbackForm.reset();
       setTimeout(() => {
         formSuccessMessage.textContent = "";
         formSuccessMessage.style.display = "none";
@@ -363,12 +363,13 @@ loadHTML("footer", "footer.html", function () {
       nextButton.innerHTML = "Play Again";
       nextButton.style.display = "block";
 
-      facbeookLink.href = 'https://www.facebook.com/sharer/sharer.php?u=https://alexis-sammut.github.io/js-grammy-awards/quiz.html';
+      facbeookLink.href =
+        "https://www.facebook.com/sharer/sharer.php?u=https://alexis-sammut.github.io/js-grammy-awards/quiz.html";
       xLink.href = `https://twitter.com/intent/tweet?text=I%20scored%20${score}/10%20on%20the%20Grammy%20Quiz!%20Test%20your%20knowledge%20here:&url=https://alexis-sammut.github.io/js-grammy-awards/quiz.html&hashtags=QuizTime,Grammys`;
-      linkedinLink.href = 'https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falexis-sammut.github.io%2Fjs-grammy-awards%2Fquiz.html&title=Grammy%20Awards%20Quiz&summary=Think%20you%27re%20a%20Grammy%20expert%3F%20Take%20this%20quiz%20to%20prove%20your%20music%20trivia%20skills%20and%20see%20how%20well%20you%20know%20the%20history%20of%20the%20Grammys!&source=Grammy%20Awards%3A%20Winners%20%26%20Records';
-      
+      linkedinLink.href =
+        "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falexis-sammut.github.io%2Fjs-grammy-awards%2Fquiz.html&title=Grammy%20Awards%20Quiz&summary=Think%20you%27re%20a%20Grammy%20expert%3F%20Take%20this%20quiz%20to%20prove%20your%20music%20trivia%20skills%20and%20see%20how%20well%20you%20know%20the%20history%20of%20the%20Grammys!&source=Grammy%20Awards%3A%20Winners%20%26%20Records";
+
       quizSummary.style.display = "block";
-      
     }
 
     function handleNextButton() {
@@ -386,7 +387,7 @@ loadHTML("footer", "footer.html", function () {
         startQuiz();
       }
     });
- 
+
     startQuiz();
   }
 })();
