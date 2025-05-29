@@ -1,0 +1,59 @@
+<footer>
+  <div class="contact">
+    <a href="mailto:alexis.sammut26@gmail.com">Contact me</a>
+  </div>
+  <div class="feedback">
+    Have feedback or questions? Feel free to fill out the form or contact me
+    directly.
+  </div>
+  <div class="linkedin">
+    <span>You can also connect with me on</span>
+    <a
+      href="https://fr.linkedin.com/in/alexis-sammut-217b22209"
+      target="_blank"
+    >
+      <img
+        class="linkedin"
+        src="Images/linkedin.svg"
+        alt="linkedin logo"
+        height="23"
+        width="23"
+      >
+    </a>
+  </div>
+  <form class="form" id="feedbackForm">
+    <fieldset>
+      <legend>Feedback Form</legend>
+      <div class="field-container">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder=" "
+        ><label for="name">Name</label>
+        <div class="error-message" id="nameError"></div>
+      </div>
+      <div class="field-container">
+        <input type="email" name="email" id="email" placeholder=" " required>
+        <label for="email">E-mail</label>
+        <div class="error-message" id="emailError"></div>
+      </div>
+      <div class="field-container">
+        <textarea
+          name="feedback"
+          id="feedback"
+          rows="4"
+          placeholder=" "
+        ></textarea>
+        <label for="feedback">Feedback</label>
+        <div class="error-message" id="feedbackError"></div>
+      </div>
+      <button type="submit">Submit Feedback</button>
+      <div id="formSuccessMessage" class="success-message"></div>
+    </fieldset>
+  </form>
+  <div class="copyright">
+    Copyright &copy; 2025 Grammy Awards: Winners &amp; Records. All rights
+    reserved.
+  </div>
+</footer>
