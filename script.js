@@ -50,7 +50,6 @@ loadHTML(
     function switchMode() {
       document.body.classList.toggle("light-mode");
 
-      // Check if light-mode is active after toggling
       const isLightMode = document.body.classList.contains("light-mode");
 
       // Save the mode to localStorage
@@ -172,7 +171,7 @@ loadHTML("footer", "footer.html", function () {
 });
 
 // Function to load the quiz logic only if the current page is quiz.html
-(function () {
+function quiz() {
   const currentPage = window.location.pathname.split("/").pop();
 
   if (currentPage === "quiz.html") {
@@ -390,4 +389,52 @@ loadHTML("footer", "footer.html", function () {
 
     startQuiz();
   }
-})();
+};
+
+quiz();
+
+// Function to initialize carousels on the historical moments page
+function historicalMoments() {
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "historical_moments.html") {
+
+        // Function to actually initialize a singular carousel
+        function initCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+
+            const slideContainer = carousel.querySelector('.slide-container1, .slide-container2, .slide-container3');
+            const slides = slideContainer.querySelectorAll('.slide');
+            const prevBtn = carousel.querySelector('.carousel-prev-btn');
+            const nextBtn = carousel.querySelector('.carousel-next-btn');
+
+            let currentSlideIndex = 0;
+            const totalSlides = slides.length;
+
+            function updateCarousel() {
+               const offset = -currentSlideIndex * 100;
+                slideContainer.style.transform = `translateX(${offset}%)`;
+            }
+
+            function showNextSlide() {
+                currentSlideIndex = (currentSlideIndex + 1) % totalSlides; // Loop back to start
+                updateCarousel();
+            }
+
+            function showPrevSlide() {
+                currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides; // Loop to end
+                updateCarousel();
+            }
+            
+            prevBtn.addEventListener('click', showPrevSlide);
+            nextBtn.addEventListener('click', showNextSlide);
+            
+            updateCarousel();
+        }
+        initCarousel('jlo-carousel');
+        initCarousel('lady_gaga-carousel');
+        initCarousel('queen_latifah-carousel')
+    }
+}
+
+historicalMoments();

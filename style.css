@@ -16,7 +16,7 @@ body {
     "intro intro"
     "main sidebar"
     "footer footer";
-  grid-template-columns: 3fr 1fr; /* main and aside */
+  grid-template-columns: 3fr 1fr;
   margin: 0;
   padding: 0;
 }
@@ -188,21 +188,21 @@ legend {
 }
 
 .error-message {
-  color: #d9534f; /* A common red for errors */
+  color: #d9534f;
   font-size: 0.8em;
   margin-top: 5px;
-  text-align: left; /* Align error messages to the left */
-  margin-left: 20px; /* Indent slightly */
-  height: 1.2em; /* Reserve space to prevent layout shifts */
+  text-align: left;
+  margin-left: 20px;
+  height: 1.2em;
 }
 
 .field-container input.invalid,
 .field-container textarea.invalid {
-  border: 2px solid #d9534f; /* Red border for invalid fields */
+  border: 2px solid #d9534f; 
 }
 
 .success-message {
-  color: #5cb85c; /* Green for success */
+  color: #5cb85c;
   font-weight: bold;
   margin-top: 15px;
   text-align: center;
@@ -212,7 +212,6 @@ legend {
   background-color: #e6ffe6;
 }
 
-/* Hide initial error/success messages */
 .error-message:empty {
   display: none;
 }
@@ -352,7 +351,6 @@ input:checked + .slider:before {
   transform: translateX(15px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 17px;
   border: 1px #222222 solid;
@@ -670,25 +668,22 @@ tr:nth-of-type(even) {
   position: relative;
 }
 
-.carousel input {
-  display: none;
-}
 
 .slide-container1,
 .slide-container2,
 .slide-container3 {
   display: flex;
-  width: 200%;
   transition: transform 0.5s ease-in-out;
 }
 
 .slide {
   display: flex;
   justify-content: center;
-  width: 200%;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: 50%;
+  align-items: center;
+  width: 100%; 
+  flex-shrink: 0; 
+  flex-grow: 0;  
+  flex-basis: 100%;
 }
 
 .slide img {
@@ -697,68 +692,35 @@ tr:nth-of-type(even) {
   object-fit: contain;
 }
 
-.navigation {
-  text-align: center;
+.carousel-nav {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 5;
+  padding: 0 10px;
+  box-sizing: border-box; 
 }
 
-.navigation label {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: #bbb;
-  border-radius: 50%;
-  margin: 5px;
+.carousel-nav button {
+  background-color: #d4a857a0;
+  color: black;
+  border: none;
+  padding: 10px 15px;
   cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.2em;
+  outline: none;
 }
 
-#slide1-1:checked ~ .slide-container1 {
-  transform: translateX(0%);
-}
-#slide1-2:checked ~ .slide-container1 {
-  transform: translateX(-50%);
-}
-#slide1-3:checked ~ .slide-container1 {
-  transform: translateX(-100%);
+body.light-mode .carousel-nav button {
+  color: white;  
 }
 
-#slide2-1:checked ~ .slide-container2 {
-  transform: translateX(0%);
-}
-#slide2-2:checked ~ .slide-container2 {
-  transform: translateX(-50%);
-}
-#slide2-3:checked ~ .slide-container2 {
-  transform: translateX(-100%);
-}
-
-#slide3-1:checked ~ .slide-container3 {
-  transform: translateX(0%);
-}
-#slide3-2:checked ~ .slide-container3 {
-  transform: translateX(-50%);
-}
-#slide3-3:checked ~ .slide-container3 {
-  transform: translateX(-100%);
-}
-
-#slide1-1:checked ~ .navigation .label1-1,
-#slide1-2:checked ~ .navigation .label1-2,
-#slide1-3:checked ~ .navigation .label1-3 {
-  background: #d4a857;
-}
-#slide2-1:checked ~ .navigation .label2-1,
-#slide2-2:checked ~ .navigation .label2-2,
-#slide2-3:checked ~ .navigation .label2-3 {
-  background: #d4a857;
-}
-#slide3-1:checked ~ .navigation .label3-1,
-#slide3-2:checked ~ .navigation .label3-2,
-#slide3-3:checked ~ .navigation .label3-3 {
-  background: #d4a857;
+.carousel-nav button:hover {
+  background-color: #d4a857
 }
 
 iframe {
@@ -766,7 +728,7 @@ iframe {
   height: 315px;
 }
 
-/* Quizz page */
+/* Quiz page */
 .app {
   background-color: #222222;
   width: 90%;
