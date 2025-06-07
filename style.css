@@ -3,10 +3,11 @@ body {
   background-color: #111111;
   color: white;
   font-family: Helvetica, Arial, sans-serif;
-  width: 100vw;
+  width: 100%;
   max-width: 100vw;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; 
 }
 
 .container {
@@ -19,14 +20,16 @@ body {
   grid-template-columns: 3fr 1fr;
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 header {
   grid-area: header;
   display: flex;
   background-color: #222222;
-  width: 100vw;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 header img {
@@ -38,6 +41,11 @@ header img {
   text-decoration: none;
   color: #d4a857;
   margin: 5px 20px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 header {
@@ -50,13 +58,15 @@ header {
   position: sticky;
   top: -121px;
   z-index: 100;
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 nav {
-  grid-area: nav;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   margin-top: 0;
+  box-sizing: border-box;
 }
 
 nav a,
@@ -72,9 +82,10 @@ nav ul {
   gap: 70px;
   list-style-type: none;
   background-color: #d4a857;
-  font-size: 1.1em;
+  font-size: 1 em;
   padding: 8px;
   margin: 0;
+  box-sizing: border-box;
 }
 
 nav li {
@@ -109,6 +120,8 @@ nav a:hover {
 
 #footer {
   grid-area: footer;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 footer {
@@ -124,11 +137,15 @@ footer {
   background-color: #222222;
   color: #cccccc;
   margin-top: 40px;
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 form {
   grid-area: form;
   margin-left: 20px;
+  max-width: 100%; 
+  box-sizing: border-box;
 }
 
 fieldset {
@@ -138,6 +155,7 @@ fieldset {
   text-align: center;
   padding-right: 20px;
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 legend {
@@ -161,8 +179,8 @@ legend {
 
 .field-container input,
 .field-container textarea {
-  width: 100%;
-  max-width: 83%;
+  width: calc(100% - 40px); 
+  max-width: calc(100% - 40px); 
   padding: 20px;
   border: 1px solid #d4a857;
   border-radius: 20px;
@@ -170,6 +188,7 @@ legend {
   outline: none;
   background: white;
   margin-right: 0;
+  box-sizing: border-box;
 }
 
 .field-container input:focus + label,
@@ -291,8 +310,9 @@ img.linkedin {
 
 .intro {
   grid-area: intro;
-  width: 100vw;
+  width: 100%; 
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 .intro p {
@@ -304,14 +324,17 @@ img.linkedin {
 /* Dark/Light Mode Switch + Light Mode classes */
 
 .switch {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  left: auto;
-  z-index: 2000;
+  position: relative; 
+  top: auto;
+  right: auto; 
+  left: auto; 
+  z-index: auto;
   width: 40px;
   height: 24px;
+  margin-left: 20px; 
+  flex-shrink: 0; 
 }
+
 .switch input {
   opacity: 0;
   width: 0;
@@ -508,6 +531,7 @@ figure {
   text-align: center;
 }
 
+
 /* Nominees & Winners page*/
 .full-width {
   display: grid;
@@ -518,12 +542,14 @@ figure {
     "footer footer";
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 .full-width main {
-  width: calc(100vw - 60px);
-  max-width: 100vw;
+  width: calc(100% - 60px); 
+  max-width: 100%;
+  margin: 30px; 
+  box-sizing: border-box;
 }
 
 .rotate-message {
@@ -537,6 +563,8 @@ figure {
   position: fixed;
   bottom: 0;
   left: 0;
+  width: 100%; 
+  box-sizing: border-box;
   z-index: 1000;
 }
 
@@ -544,6 +572,8 @@ table {
   margin: 0;
   border-spacing: 0;
   border: #d4a857 3px solid;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 caption {
@@ -597,6 +627,7 @@ span.rowheader {
 
 table li {
   margin: 10px;
+  word-wrap: break-word; 
 }
 
 .winner {
@@ -619,14 +650,18 @@ table li {
   text-align: center;
   align-self: end;
   font-size: 1.1em;
-  width: 300px;
+  width: 100%; 
+  max-width: 300px; 
+  box-sizing: border-box;
 }
 
 .links {
   grid-area: links;
   justify-self: center;
   text-align: center;
-  width: 300px;
+  width: 100%; 
+  max-width: 300px;
+  box-sizing: border-box;
 }
 
 .youtube {
@@ -648,7 +683,7 @@ tr:nth-of-type(even) {
 /* Historical Moments page */
 .moment-title {
   position: sticky;
-  top: 35px;
+  top: 34px;
   z-index: 10;
   background-color: #111111;
   padding: 5px;
@@ -727,15 +762,17 @@ iframe {
   height: 315px;
 }
 
+
 /* Quiz page */
 .app {
   background-color: #222222;
-  width: 90%;
+  width: calc(100% - 60px); 
   max-width: 600px;
   margin: auto;
   border-radius: 20px;
   padding: 30px;
   justify-self: center;
+  box-sizing: border-box;
 }
 
 .app h1 {
@@ -770,6 +807,7 @@ iframe {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 .btn:hover:not([disabled]) {
@@ -813,6 +851,7 @@ iframe {
   list-style-type: none;
   margin: 10px;
   font-size: 1.1em;
+  word-wrap: break-word;
 }
 
 #summary a {
@@ -836,12 +875,14 @@ body.light-mode #summary a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .social-logo {
   width: 40px;
   height: 40px;
   margin: 0 10px;
+  flex-shrink: 0; 
 }
 
 /* Crossword page */
@@ -859,6 +900,7 @@ body.light-mode #summary a:hover {
   background-color: white;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .blank_cell {
@@ -866,6 +908,7 @@ body.light-mode #summary a:hover {
   background-color: black;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .cell input {
@@ -880,6 +923,7 @@ body.light-mode #summary a:hover {
   padding: 0;
   margin: 0;
   color: #333;
+  box-sizing: border-box;
 }
 
 .cell input:hover, .cell input:focus {
@@ -891,6 +935,7 @@ body.light-mode #summary a:hover {
   justify-content: flex-end;
   gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap; 
 }
 
 .clues {
@@ -899,6 +944,8 @@ body.light-mode #summary a:hover {
     padding: 10px;
     border: 2px solid #d4a857;
     border-radius: 15px;
+    max-width: calc(100% - 40px); 
+    box-sizing: border-box;
 }
 
 .clues h2 {
@@ -910,6 +957,8 @@ body.light-mode #summary a:hover {
 .clues span{
     font-size: 1.2em;
     margin-bottom: 10px;
+    display: block; 
+    word-wrap: break-word; 
 }
 
 .cell.correct-word,
@@ -919,9 +968,21 @@ body.light-mode #summary a:hover {
     background-color: #a3d9a3;
 }
 
+/* Larger Screens */
+@media (min-width: 1251px) {
+  
+     .form label{
+        margin-left: 20px;
+     }
+
+  }
+
 
 /* Laptops & Large Tablets*/
 @media (max-width: 1250px) {
+    /* header h1{
+        font-size: 1.8em;
+    } */
   .photoevent {
     display: block;
   }
@@ -950,15 +1011,13 @@ body.light-mode #summary a:hover {
 
 /* Small Tablets */
 @media (max-width: 700px) {
+#header {
+    position: static;
+  }
+
   .container {
-    grid-template-areas:
-      "header"
-      "intro"
-      "main"
-      "sidebar"
-      "footer";
-    margin: 0;
-    max-width: 100vw;
+    display: block;
+    overflow-x: hidden;
   }
 
   header a,
@@ -967,7 +1026,7 @@ body.light-mode #summary a:hover {
   }
 
   nav ul {
-    gap: 30px;
+    gap: 15px;
   }
 
   nav li {
@@ -980,27 +1039,26 @@ body.light-mode #summary a:hover {
   .container main,
   .container aside {
     margin: 10px;
-    width: calc(100vw - 50px);
+    width: calc(100% - 20px);
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .banner-image {
-    width: 100vw;
+    width: 100%; 
     height: auto;
     margin: 0;
   }
 
   .timeline-container {
     display: flex;
-    width: 100vw;
+    width: 100%; 
+    max-width: 100%;
   }
 
   .timeline {
     width: 10px;
     margin-left: 10px;
-  }
-
-  .events-header {
-    top: 39px;
   }
 
   .photoevent {
@@ -1009,7 +1067,9 @@ body.light-mode #summary a:hover {
 
   .events p {
     margin-left: 20px;
-    width: 70vw;
+    width: calc(100% - 20px); 
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   figure {
@@ -1022,7 +1082,7 @@ body.light-mode #summary a:hover {
     max-width: 95%;
     margin-left: 7.5px;
     display: block;
-    margin: 0;
+    margin: 0 auto; 
     justify-self: center;
   }
 
@@ -1069,11 +1129,28 @@ body.light-mode #summary a:hover {
       "contact contact"
       "linkedin linkedin"
       "copyright copyright";
+    padding: 20px; 
+  }
+
+  form{
+    width: 100%;
+    max-width: 100%;
+    justify-self: center;
+    margin: 0; 
+    box-sizing: border-box;
   }
 
   iframe {
-    width: 460px;
-    height: 260px;
+    width: 100%;
+    height: auto;
+    max-width: 460px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .field-container input,
+  .field-container textarea {
+    max-width: calc(100% - 40px); 
+    width: calc(100% - 40px); 
   }
 }
 
@@ -1083,47 +1160,57 @@ body.light-mode #summary a:hover {
   }
 }
 
-@media (max-width: 656px) {
-  #header {
-    position: static;
-  }
-
-  .events-header {
-    top: 0;
-  }
-}
 /* Phones*/
 @media (max-width: 552px) {
-  #header {
-    top: -154px;
-  }
-
   iframe {
-    width: 360px;
-    height: 200px;
+    width: 100%;
+    height: auto;
+    max-width: 360px;
+    aspect-ratio: 16 / 9;
   }
 
   .moment-title {
     position: static;
   }
+
+  .crossword {
+    grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(6, 40px);
+    max-width: 240px;
+  }
+
+  .cell input {
+    font-size: 1.5em;
+  }
+
+  .controls {
+    justify-content: center;
+  }
 }
 
 /* Smaller Phones */
 @media (max-width: 367px) {
-  #header {
-    position: static;
-  }
 
   nav ul {
-    gap: 10px;
+    gap: 5px;
+    padding: 5px;
   }
 
-  .events-header {
-    top: 0;
+  nav li {
+    font-size: 1em;
+    margin: 0 5px;
   }
+
 
   iframe {
-    width: 300px;
-    height: 170px;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    aspect-ratio: 16 / 9;
   }
+
+  .app {
+    width: 100%;
+  }
+  
 }
