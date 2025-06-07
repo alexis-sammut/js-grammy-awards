@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Alexis Sammut" />
+    <meta
+      name="description"
+      content="Challenge yourself with a fun crossword puzzle about the Grammy Awards!"
+    />
+    <meta
+      name="keywords"
+      content="Grammy Awards, Grammy crossword, music crossword, music trivia, awards show, puzzle, brain game"
+    />
+    <title>Grammy Awards Crossword Challenge</title>
+
+    <meta
+      property="og:title"
+      content="Grammy Awards Crossword - Test Your Music Knowledge!"
+    />
+    <meta
+      property="og:description"
+      content="Think you know the Grammys? Solve this fun crossword puzzle to prove your expertise in music history and awards!"
+    />
+    <meta
+      property="og:image"
+      content="https://alexis-sammut.github.io/js-grammy-awards/Images/grammy.png"
+    />
+    <meta
+      property="og:url"
+      content="https://alexis-sammut.github.io/js-grammy-awards/crossword.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:site_name"
+      content="Grammy Awards: Winners &amp; Records - Crossword Challenge"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="full-width">
+      <div id="header"></div>
+      <main>
+        <div class="app">
+          <h1>Grammy Crossword</h1>
+          <div class="crossword">
+            <div class="cell" id="cell-one">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-two">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-three">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-four">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-five">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-six">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-seven">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-eight">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-nine">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-ten">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-eleven">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twelve">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-thirteen">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="blank_cell" id="cell-fourteen"></div>
+            <div class="cell" id="cell-fifteen">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-sixteen">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="blank_cell" id="cell-seventeen"></div>
+            <div class="cell" id="cell-eighteen">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-nineteen">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twenty">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twenty-one">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twenty-two">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twenty-three">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twenty-four">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-twenty-five">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="blank_cell" id="cell-twenty-six"></div>
+            <div class="blank_cell" id="cell-twenty-seven"></div>
+            <div class="blank_cell" id="cell-twenty-eight"></div>
+            <div class="cell" id="cell-twenty-nine">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-thirty">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-thirty-one">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-thirty-two">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-thirty-three">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="cell" id="cell-thirty-four">
+              <input type="text" maxlength="1" />
+            </div>
+            <div class="blank_cell" id="cell-thirty-five"></div>
+            <div class="blank_cell" id="cell-thirty-six"></div>
+          </div>
+        <div class="controls">
+            <button class="gold-btn" id="reset-button">Reset</button>
+            <button class="gold-btn" id="solution-button">Reveal solution</button>
+          </div>
+          <div class="clues">
+            <h2>Clue</h2>
+            <span id="one-across"></span>
+            <span id="two-across"></span>
+            <span id="four-across"></span>
+            <span id="five-across"></span>
+            <span id="six-across"></span>
+
+            <span id="one-down"></span>
+            <span id="three-down"></span>
+            <span id="four-down"></span>
+            <span id="six-down"></span>
+          </div>
+
+          <div id="summary">
+            <h3>Share your results on social media!</h3>
+            <div class="social">
+              <a
+                href="https://fr.linkedin.com/in/alexis-sammut-217b22209"
+                target="_blank"
+                id="facebook-link"
+              >
+                <img
+                  class="social-logo"
+                  src="Images/facebook_logo.png"
+                  alt="facebook logo"
+                />
+              </a>
+              <a
+                href="https://fr.linkedin.com/in/alexis-sammut-217b22209"
+                target="_blank"
+                id="x-link"
+              >
+                <img
+                  class="social-logo"
+                  src="Images/X_logo.jpg"
+                  alt="X logo (Formerly Twitter)"
+                />
+              </a>
+              <a
+                href="https://fr.linkedin.com/in/alexis-sammut-217b22209"
+                target="_blank"
+                id="linkedin-link"
+              >
+                <img
+                  class="social-logo"
+                  src="Images/linkedin.svg"
+                  alt="linkedin logo"
+                />
+              </a>
+            </div>
+            <h3>You can also improve your knowledge on the Grammys:</h3>
+            <ul>
+              <li><a href="index.html">The History of the Grammys</a></li>
+              <li>
+                <a href="2024_grammys.html"
+                  >The Nominees and Winners of the 66th Grammys</a
+                >
+              </li>
+              <li>
+                <a href="2025_grammys.html"
+                  >The Nominees and Winners of the 67th Grammys</a
+                >
+              </li>
+              <li>
+                <a href="historical_moments.html"
+                  >Famous events that occured at the Grammys</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="footer"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
